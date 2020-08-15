@@ -2,6 +2,7 @@ package frontend;
 
 import javax.swing.*;
 
+
 public class MapScroller {
     public static void main(String[] args) {
         
@@ -17,6 +18,6 @@ public class MapScroller {
     }
 
     public MapScroller() {
-        
+
     }
 }
