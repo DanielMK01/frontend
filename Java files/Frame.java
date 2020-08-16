@@ -16,7 +16,7 @@ public class Frame extends JFrame {
   public Frame () throws IOException{
     frame = buildFrame();
     
-    img = ImageIO.read(new File("uw-campus-printable-09191024_1.jpg"));
+    img = ImageIO.read(new File("/Users/danielkim/Documents/frontend/Resources/uwmap.jpg"));
     
   }
   
