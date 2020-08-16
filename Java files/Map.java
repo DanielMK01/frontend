@@ -1,15 +1,16 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.io.*;
 
 public class Map {
 
-   public static void main(String[] args) {
+   public static void main(String[] args) throws IOException {
    
       Scanner console = new Scanner(System.in);
       Random rand = new Random();
       
       // 50 x 50 coordinate grid overlay for visual map
-      int[][] grid = new int[50][50];
+      int[][] grid = new int[1050][750];
       
       System.out.print("Welcome to Map. How many points would you like to create? ");
       int count = console.nextInt();
@@ -30,17 +31,19 @@ public class Map {
          }
          else
          {
-            x = rand.nextInt(51);
-            y = rand.nextInt(51);
+            x = rand.nextInt(1000);
+            y = rand.nextInt(700);
          }
          pointList[i] = new Point(x, y);
+         grid[x][y]++;
       }
       
       // print out points
+      Frame fm = new Frame();
       for(int i = 0; i < count; i++) {
          pointList[i].getCoordinate();
+         fm.drawPoint(pointList[i].getX(), pointList[i].getY());
       }
-      
    }
 
 }
